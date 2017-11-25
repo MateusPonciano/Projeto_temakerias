@@ -1,0 +1,2 @@
+class Garcom < ApplicationRecord
+end

@@ -1,0 +1,37 @@
+<%= form_with(model: mesa, local: true) do |form| %>
+  <% if mesa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mesa.errors.count, "error") %> prohibited this mesa from being saved:</h2>
+
+      <ul>
+      <% mesa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codigo %>
+    <%= form.text_field :codigo, id: :mesa_codigo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horarioentrada %>
+    <%= form.datetime_select :horarioentrada, id: :mesa_horarioentrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horariosaida %>
+    <%= form.datetime_select :horariosaida, id: :mesa_horariosaida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conta %>
+    <%= form.text_field :conta, id: :mesa_conta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

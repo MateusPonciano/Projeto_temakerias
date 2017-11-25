@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Atendes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigomesa</th>
+      <th>Horarioentrada</th>
+      <th>Cpf garcom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atendes.each do |atende| %>
+      <tr>
+        <td><%= atende.codigomesa %></td>
+        <td><%= atende.horarioentrada %></td>
+        <td><%= atende.cpf_garcom %></td>
+        <td><%= link_to 'Show', atende %></td>
+        <td><%= link_to 'Edit', edit_atende_path(atende) %></td>
+        <td><%= link_to 'Destroy', atende, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Atende', new_atende_path %>

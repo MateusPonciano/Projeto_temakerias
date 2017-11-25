@@ -1,0 +1,2 @@
+class Armazena < ApplicationRecord
+end

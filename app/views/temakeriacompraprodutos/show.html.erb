@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cnpj temakeria:</strong>
+  <%= @temakeriacompraproduto.cnpj_temakeria %>
+</p>
+
+<p>
+  <strong>Cnpj fornecedor:</strong>
+  <%= @temakeriacompraproduto.cnpj_fornecedor %>
+</p>
+
+<p>
+  <strong>Codbarras:</strong>
+  <%= @temakeriacompraproduto.codbarras %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @temakeriacompraproduto.data %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @temakeriacompraproduto.preco %>
+</p>
+
+<p>
+  <strong>Qtd:</strong>
+  <%= @temakeriacompraproduto.qtd %>
+</p>
+
+<%= link_to 'Edit', edit_temakeriacompraproduto_path(@temakeriacompraproduto) %> |
+<%= link_to 'Back', temakeriacompraprodutos_path %>

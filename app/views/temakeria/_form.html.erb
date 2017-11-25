@@ -1,0 +1,62 @@
+<%= form_with(model: temakerium, local: true) do |form| %>
+  <% if temakerium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(temakerium.errors.count, "error") %> prohibited this temakerium from being saved:</h2>
+
+      <ul>
+      <% temakerium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj, id: :temakerium_cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf_adm %>
+    <%= form.text_field :cpf_adm, id: :temakerium_cpf_adm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :string %>
+    <%= form.text_field :string, id: :temakerium_string %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :temakerium_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :faturamento %>
+    <%= form.text_field :faturamento, id: :temakerium_faturamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :despesas %>
+    <%= form.text_field :despesas, id: :temakerium_despesas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, id: :temakerium_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.text_field :cep, id: :temakerium_cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnpj_matriz %>
+    <%= form.text_field :cnpj_matriz, id: :temakerium_cnpj_matriz %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

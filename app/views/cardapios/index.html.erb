@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cardapios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Nome</th>
+      <th>Preco</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cardapios.each do |cardapio| %>
+      <tr>
+        <td><%= cardapio.codigo %></td>
+        <td><%= cardapio.nome %></td>
+        <td><%= cardapio.preco %></td>
+        <td><%= cardapio.categoria %></td>
+        <td><%= link_to 'Show', cardapio %></td>
+        <td><%= link_to 'Edit', edit_cardapio_path(cardapio) %></td>
+        <td><%= link_to 'Destroy', cardapio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cardapio', new_cardapio_path %>

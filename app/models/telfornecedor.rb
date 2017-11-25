@@ -1,0 +1,2 @@
+class Telfornecedor < ApplicationRecord
+end

@@ -1,0 +1,22 @@
+<%= form_with(model: garcom, local: true) do |form| %>
+  <% if garcom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(garcom.errors.count, "error") %> prohibited this garcom from being saved:</h2>
+
+      <ul>
+      <% garcom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :garcom_cpf %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

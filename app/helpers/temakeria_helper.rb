@@ -1,0 +1,2 @@
+module TemakeriaHelper
+end

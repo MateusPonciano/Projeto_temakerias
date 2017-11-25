@@ -1,0 +1,27 @@
+<%= form_with(model: garcomdiastrabalho, local: true) do |form| %>
+  <% if garcomdiastrabalho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(garcomdiastrabalho.errors.count, "error") %> prohibited this garcomdiastrabalho from being saved:</h2>
+
+      <ul>
+      <% garcomdiastrabalho.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :garcomdiastrabalho_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diastrabalho %>
+    <%= form.text_field :diastrabalho, id: :garcomdiastrabalho_diastrabalho %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

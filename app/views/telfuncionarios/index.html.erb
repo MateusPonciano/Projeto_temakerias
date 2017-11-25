@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Telfuncionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpf</th>
+      <th>Telefone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telfuncionarios.each do |telfuncionario| %>
+      <tr>
+        <td><%= telfuncionario.cpf %></td>
+        <td><%= telfuncionario.telefone %></td>
+        <td><%= link_to 'Show', telfuncionario %></td>
+        <td><%= link_to 'Edit', edit_telfuncionario_path(telfuncionario) %></td>
+        <td><%= link_to 'Destroy', telfuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Telfuncionario', new_telfuncionario_path %>

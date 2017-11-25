@@ -1,0 +1,27 @@
+<%= form_with(model: compo, local: true) do |form| %>
+  <% if compo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(compo.errors.count, "error") %> prohibited this compo from being saved:</h2>
+
+      <ul>
+      <% compo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codbarras %>
+    <%= form.text_field :codbarras, id: :compo_codbarras %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codcardapio %>
+    <%= form.number_field :codcardapio, id: :compo_codcardapio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

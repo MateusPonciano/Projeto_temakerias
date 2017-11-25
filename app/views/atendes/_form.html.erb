@@ -1,0 +1,32 @@
+<%= form_with(model: atende, local: true) do |form| %>
+  <% if atende.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(atende.errors.count, "error") %> prohibited this atende from being saved:</h2>
+
+      <ul>
+      <% atende.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codigomesa %>
+    <%= form.text_field :codigomesa, id: :atende_codigomesa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horarioentrada %>
+    <%= form.datetime_select :horarioentrada, id: :atende_horarioentrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf_garcom %>
+    <%= form.text_field :cpf_garcom, id: :atende_cpf_garcom %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

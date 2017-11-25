@@ -1,0 +1,2 @@
+class Telfuncionario < ApplicationRecord
+end

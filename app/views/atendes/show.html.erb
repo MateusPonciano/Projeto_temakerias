@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigomesa:</strong>
+  <%= @atende.codigomesa %>
+</p>
+
+<p>
+  <strong>Horarioentrada:</strong>
+  <%= @atende.horarioentrada %>
+</p>
+
+<p>
+  <strong>Cpf garcom:</strong>
+  <%= @atende.cpf_garcom %>
+</p>
+
+<%= link_to 'Edit', edit_atende_path(@atende) %> |
+<%= link_to 'Back', atendes_path %>

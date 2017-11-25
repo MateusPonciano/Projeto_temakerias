@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @telfornecedor.cnpj %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @telfornecedor.telefone %>
+</p>
+
+<%= link_to 'Edit', edit_telfornecedor_path(@telfornecedor) %> |
+<%= link_to 'Back', telfornecedors_path %>

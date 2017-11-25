@@ -23,3 +23,6 @@ Things you may want to cover:
 
 * ...
 
+
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
+export PATH=/opt/oracle/instantclient_12_2:$PATH

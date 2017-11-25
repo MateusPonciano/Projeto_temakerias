@@ -1,0 +1,2 @@
+class Mesacompracardapio < ApplicationRecord
+end

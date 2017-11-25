@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  horarioentrada: 2017-11-25 14:15:14
+  horariosaida: 2017-11-25 14:15:14
+  conta: 1.5
+
+two:
+  codigo: MyString
+  horarioentrada: 2017-11-25 14:15:14
+  horariosaida: 2017-11-25 14:15:14
+  conta: 1.5

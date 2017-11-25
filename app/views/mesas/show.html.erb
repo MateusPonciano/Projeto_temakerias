@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @mesa.codigo %>
+</p>
+
+<p>
+  <strong>Horarioentrada:</strong>
+  <%= @mesa.horarioentrada %>
+</p>
+
+<p>
+  <strong>Horariosaida:</strong>
+  <%= @mesa.horariosaida %>
+</p>
+
+<p>
+  <strong>Conta:</strong>
+  <%= @mesa.conta %>
+</p>
+
+<%= link_to 'Edit', edit_mesa_path(@mesa) %> |
+<%= link_to 'Back', mesas_path %>

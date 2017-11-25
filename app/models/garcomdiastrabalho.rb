@@ -1,0 +1,2 @@
+class Garcomdiastrabalho < ApplicationRecord
+end

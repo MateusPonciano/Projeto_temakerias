@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apresenta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codcardapio</th>
+      <th>Codigomesa</th>
+      <th>Horarioentrada</th>
+      <th>Codpromocao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apresenta.each do |apresentum| %>
+      <tr>
+        <td><%= apresentum.codcardapio %></td>
+        <td><%= apresentum.codigomesa %></td>
+        <td><%= apresentum.horarioentrada %></td>
+        <td><%= apresentum.codpromocao %></td>
+        <td><%= link_to 'Show', apresentum %></td>
+        <td><%= link_to 'Edit', edit_apresentum_path(apresentum) %></td>
+        <td><%= link_to 'Destroy', apresentum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apresentum', new_apresentum_path %>

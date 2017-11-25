@@ -1,0 +1,37 @@
+<%= form_with(model: apresentum, local: true) do |form| %>
+  <% if apresentum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apresentum.errors.count, "error") %> prohibited this apresentum from being saved:</h2>
+
+      <ul>
+      <% apresentum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codcardapio %>
+    <%= form.number_field :codcardapio, id: :apresentum_codcardapio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigomesa %>
+    <%= form.text_field :codigomesa, id: :apresentum_codigomesa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horarioentrada %>
+    <%= form.datetime_select :horarioentrada, id: :apresentum_horarioentrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codpromocao %>
+    <%= form.number_field :codpromocao, id: :apresentum_codpromocao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Garcoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @garcoms.each do |garcom| %>
+      <tr>
+        <td><%= garcom.cpf %></td>
+        <td><%= link_to 'Show', garcom %></td>
+        <td><%= link_to 'Edit', edit_garcom_path(garcom) %></td>
+        <td><%= link_to 'Destroy', garcom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Garcom', new_garcom_path %>

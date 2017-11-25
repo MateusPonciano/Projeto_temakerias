@@ -1,0 +1,37 @@
+<%= form_with(model: mesacompracardapio, local: true) do |form| %>
+  <% if mesacompracardapio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mesacompracardapio.errors.count, "error") %> prohibited this mesacompracardapio from being saved:</h2>
+
+      <ul>
+      <% mesacompracardapio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codcardapio %>
+    <%= form.number_field :codcardapio, id: :mesacompracardapio_codcardapio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigomesa %>
+    <%= form.text_field :codigomesa, id: :mesacompracardapio_codigomesa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horarioentrada %>
+    <%= form.datetime_select :horarioentrada, id: :mesacompracardapio_horarioentrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtd %>
+    <%= form.number_field :qtd, id: :mesacompracardapio_qtd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

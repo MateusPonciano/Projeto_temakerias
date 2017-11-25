@@ -1,0 +1,27 @@
+<%= form_with(model: telfornecedor, local: true) do |form| %>
+  <% if telfornecedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(telfornecedor.errors.count, "error") %> prohibited this telfornecedor from being saved:</h2>
+
+      <ul>
+      <% telfornecedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj, id: :telfornecedor_cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, id: :telfornecedor_telefone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

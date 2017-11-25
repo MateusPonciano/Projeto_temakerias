@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codbarras:</strong>
+  <%= @armazena.codbarras %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @armazena.cnpj %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @armazena.quantidade %>
+</p>
+
+<%= link_to 'Edit', edit_armazena_path(@armazena) %> |
+<%= link_to 'Back', armazenas_path %>

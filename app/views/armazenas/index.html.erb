@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Armazenas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codbarras</th>
+      <th>Cnpj</th>
+      <th>Quantidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @armazenas.each do |armazena| %>
+      <tr>
+        <td><%= armazena.codbarras %></td>
+        <td><%= armazena.cnpj %></td>
+        <td><%= armazena.quantidade %></td>
+        <td><%= link_to 'Show', armazena %></td>
+        <td><%= link_to 'Edit', edit_armazena_path(armazena) %></td>
+        <td><%= link_to 'Destroy', armazena, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Armazena', new_armazena_path %>

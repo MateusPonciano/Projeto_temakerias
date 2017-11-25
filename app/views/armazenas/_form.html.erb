@@ -1,0 +1,32 @@
+<%= form_with(model: armazena, local: true) do |form| %>
+  <% if armazena.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(armazena.errors.count, "error") %> prohibited this armazena from being saved:</h2>
+
+      <ul>
+      <% armazena.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :codbarras %>
+    <%= form.text_field :codbarras, id: :armazena_codbarras %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj, id: :armazena_cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+    <%= form.number_field :quantidade, id: :armazena_quantidade %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

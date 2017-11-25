@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mesacompracardapios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codcardapio</th>
+      <th>Codigomesa</th>
+      <th>Horarioentrada</th>
+      <th>Qtd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mesacompracardapios.each do |mesacompracardapio| %>
+      <tr>
+        <td><%= mesacompracardapio.codcardapio %></td>
+        <td><%= mesacompracardapio.codigomesa %></td>
+        <td><%= mesacompracardapio.horarioentrada %></td>
+        <td><%= mesacompracardapio.qtd %></td>
+        <td><%= link_to 'Show', mesacompracardapio %></td>
+        <td><%= link_to 'Edit', edit_mesacompracardapio_path(mesacompracardapio) %></td>
+        <td><%= link_to 'Destroy', mesacompracardapio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mesacompracardapio', new_mesacompracardapio_path %>

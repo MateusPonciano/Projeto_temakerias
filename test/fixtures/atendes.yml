@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigomesa: MyString
+  horarioentrada: 2017-11-25 14:16:20
+  cpf_garcom: MyString
+
+two:
+  codigomesa: MyString
+  horarioentrada: 2017-11-25 14:16:20
+  cpf_garcom: MyString

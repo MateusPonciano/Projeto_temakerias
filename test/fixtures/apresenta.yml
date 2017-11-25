@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codcardapio: 1
+  codigomesa: MyString
+  horarioentrada: 2017-11-25 14:16:10
+  codpromocao: 1
+
+two:
+  codcardapio: 1
+  codigomesa: MyString
+  horarioentrada: 2017-11-25 14:16:10
+  codpromocao: 1

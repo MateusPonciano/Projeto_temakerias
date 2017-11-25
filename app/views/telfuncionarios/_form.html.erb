@@ -1,0 +1,27 @@
+<%= form_with(model: telfuncionario, local: true) do |form| %>
+  <% if telfuncionario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(telfuncionario.errors.count, "error") %> prohibited this telfuncionario from being saved:</h2>
+
+      <ul>
+      <% telfuncionario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :telfuncionario_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, id: :telfuncionario_telefone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

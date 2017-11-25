@@ -1,0 +1,2 @@
+class Temakerium < ApplicationRecord
+end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @funcionario.cpf %>
+</p>
+
+<p>
+  <strong>Cnpj t:</strong>
+  <%= @funcionario.cnpj_t %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @funcionario.nome %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @funcionario.datanasc %>
+</p>
+
+<p>
+  <strong>Dataadmissao:</strong>
+  <%= @funcionario.dataadmissao %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @funcionario.salario %>
+</p>
+
+<%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Back', funcionarios_path %>

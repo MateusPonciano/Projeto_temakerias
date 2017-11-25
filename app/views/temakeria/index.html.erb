@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Temakeria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cnpj</th>
+      <th>Cpf adm</th>
+      <th>String</th>
+      <th>Nome</th>
+      <th>Faturamento</th>
+      <th>Despesas</th>
+      <th>Numero</th>
+      <th>Cep</th>
+      <th>Cnpj matriz</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @temakeria.each do |temakerium| %>
+      <tr>
+        <td><%= temakerium.cnpj %></td>
+        <td><%= temakerium.cpf_adm %></td>
+        <td><%= temakerium.string %></td>
+        <td><%= temakerium.nome %></td>
+        <td><%= temakerium.faturamento %></td>
+        <td><%= temakerium.despesas %></td>
+        <td><%= temakerium.numero %></td>
+        <td><%= temakerium.cep %></td>
+        <td><%= temakerium.cnpj_matriz %></td>
+        <td><%= link_to 'Show', temakerium %></td>
+        <td><%= link_to 'Edit', edit_temakerium_path(temakerium) %></td>
+        <td><%= link_to 'Destroy', temakerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Temakerium', new_temakerium_path %>
