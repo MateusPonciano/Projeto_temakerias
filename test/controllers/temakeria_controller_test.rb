@@ -17,7 +17,7 @@ class TemakeriaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create temakerium" do
     assert_difference('Temakerium.count') do
-      post temakeria_url, params: { temakerium: { cep: @temakerium.cep, cnpj: @temakerium.cnpj, cnpj_matriz: @temakerium.cnpj_matriz, cpf_adm: @temakerium.cpf_adm, despesas: @temakerium.despesas, faturamento: @temakerium.faturamento, nome: @temakerium.nome, numero: @temakerium.numero, string: @temakerium.string } }
+      post temakeria_url, params: { temakerium: { cep: @temakerium.cep, cnpj_matriz: @temakerium.cnpj_matriz, cpf_adm: @temakerium.cpf_adm, despesas: @temakerium.despesas, faturamento: @temakerium.faturamento, nome: @temakerium.nome, numero: @temakerium.numero } }
     end
 
     assert_redirected_to temakerium_url(Temakerium.last)
@@ -34,7 +34,7 @@ class TemakeriaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update temakerium" do
-    patch temakerium_url(@temakerium), params: { temakerium: { cep: @temakerium.cep, cnpj: @temakerium.cnpj, cnpj_matriz: @temakerium.cnpj_matriz, cpf_adm: @temakerium.cpf_adm, despesas: @temakerium.despesas, faturamento: @temakerium.faturamento, nome: @temakerium.nome, numero: @temakerium.numero, string: @temakerium.string } }
+    patch temakerium_url(@temakerium), params: { temakerium: { cep: @temakerium.cep, cnpj_matriz: @temakerium.cnpj_matriz, cpf_adm: @temakerium.cpf_adm, despesas: @temakerium.despesas, faturamento: @temakerium.faturamento, nome: @temakerium.nome, numero: @temakerium.numero } }
     assert_redirected_to temakerium_url(@temakerium)
   end
 

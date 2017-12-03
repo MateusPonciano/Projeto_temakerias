@@ -69,6 +69,6 @@ class GarcomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def garcom_params
-      params.require(:garcom).permit(:cpf)
+      params.fetch(:garcom, {})
     end
 end

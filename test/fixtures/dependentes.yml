@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpf_func: MyString
+  nome: MyString
+  relacao: MyString
+  datanasc: 2017-12-02
+  sexo: MyString
+
+two:
+  cpf_func: MyString
+  nome: MyString
+  relacao: MyString
+  datanasc: 2017-12-02
+  sexo: MyString

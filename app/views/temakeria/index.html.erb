@@ -5,9 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Cnpj</th>
       <th>Cpf adm</th>
-      <th>String</th>
       <th>Nome</th>
       <th>Faturamento</th>
       <th>Despesas</th>
@@ -21,9 +19,7 @@
   <tbody>
     <% @temakeria.each do |temakerium| %>
       <tr>
-        <td><%= temakerium.cnpj %></td>
         <td><%= temakerium.cpf_adm %></td>
-        <td><%= temakerium.string %></td>
         <td><%= temakerium.nome %></td>
         <td><%= temakerium.faturamento %></td>
         <td><%= temakerium.despesas %></td>

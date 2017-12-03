@@ -17,7 +17,7 @@ class FornecedorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create fornecedor" do
     assert_difference('Fornecedor.count') do
-      post fornecedors_url, params: { fornecedor: { cnpj: @fornecedor.cnpj, nome: @fornecedor.nome } }
+      post fornecedors_url, params: { fornecedor: { nome: @fornecedor.nome } }
     end
 
     assert_redirected_to fornecedor_url(Fornecedor.last)
@@ -34,7 +34,7 @@ class FornecedorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update fornecedor" do
-    patch fornecedor_url(@fornecedor), params: { fornecedor: { cnpj: @fornecedor.cnpj, nome: @fornecedor.nome } }
+    patch fornecedor_url(@fornecedor), params: { fornecedor: { nome: @fornecedor.nome } }
     assert_redirected_to fornecedor_url(@fornecedor)
   end
 

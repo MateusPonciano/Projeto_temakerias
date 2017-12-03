@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codbarras: MyString
   nome: MyString
-  data_validade: 2017-11-25
+  data_validade: 2017-12-02
 
 two:
-  codbarras: MyString
   nome: MyString
-  data_validade: 2017-11-25
+  data_validade: 2017-12-02

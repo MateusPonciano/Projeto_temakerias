@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dependentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpf func</th>
+      <th>Nome</th>
+      <th>Relacao</th>
+      <th>Datanasc</th>
+      <th>Sexo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dependentes.each do |dependente| %>
+      <tr>
+        <td><%= dependente.cpf_func %></td>
+        <td><%= dependente.nome %></td>
+        <td><%= dependente.relacao %></td>
+        <td><%= dependente.datanasc %></td>
+        <td><%= dependente.sexo %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dependente', new_dependente_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf func:</strong>
+  <%= @dependente.cpf_func %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dependente.nome %>
+</p>
+
+<p>
+  <strong>Relacao:</strong>
+  <%= @dependente.relacao %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @dependente.datanasc %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @dependente.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_dependente_path(@dependente) %> |
+<%= link_to 'Back', dependentes_path %>

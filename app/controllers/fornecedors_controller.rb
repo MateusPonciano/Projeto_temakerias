@@ -69,6 +69,6 @@ class FornecedorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fornecedor_params
-      params.require(:fornecedor).permit(:cnpj, :nome)
+      params.require(:fornecedor).permit(:nome)
     end
 end

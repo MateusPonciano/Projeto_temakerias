@@ -69,6 +69,6 @@ class TemakeriaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def temakerium_params
-      params.require(:temakerium).permit(:cnpj, :cpf_adm, :string, :nome, :faturamento, :despesas, :numero, :cep, :cnpj_matriz)
+      params.require(:temakerium).permit(:cpf_adm, :nome, :faturamento, :despesas, :numero, :cep, :cnpj_matriz)
     end
 end

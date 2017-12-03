@@ -17,7 +17,7 @@ class PromocaosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create promocao" do
     assert_difference('Promocao.count') do
-      post promocaos_url, params: { promocao: { codigo: @promocao.codigo, desconto: @promocao.desconto, descricao: @promocao.descricao } }
+      post promocaos_url, params: { promocao: { desconto: @promocao.desconto, descricao: @promocao.descricao } }
     end
 
     assert_redirected_to promocao_url(Promocao.last)
@@ -34,7 +34,7 @@ class PromocaosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update promocao" do
-    patch promocao_url(@promocao), params: { promocao: { codigo: @promocao.codigo, desconto: @promocao.desconto, descricao: @promocao.descricao } }
+    patch promocao_url(@promocao), params: { promocao: { desconto: @promocao.desconto, descricao: @promocao.descricao } }
     assert_redirected_to promocao_url(@promocao)
   end
 

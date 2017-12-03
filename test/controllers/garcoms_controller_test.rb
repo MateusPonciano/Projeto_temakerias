@@ -17,7 +17,7 @@ class GarcomsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create garcom" do
     assert_difference('Garcom.count') do
-      post garcoms_url, params: { garcom: { cpf: @garcom.cpf } }
+      post garcoms_url, params: { garcom: {  } }
     end
 
     assert_redirected_to garcom_url(Garcom.last)
@@ -34,7 +34,7 @@ class GarcomsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update garcom" do
-    patch garcom_url(@garcom), params: { garcom: { cpf: @garcom.cpf } }
+    patch garcom_url(@garcom), params: { garcom: {  } }
     assert_redirected_to garcom_url(@garcom)
   end
 

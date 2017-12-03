@@ -17,7 +17,7 @@ class AdministradorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create administrador" do
     assert_difference('Administrador.count') do
-      post administradors_url, params: { administrador: { cpf: @administrador.cpf, cra: @administrador.cra } }
+      post administradors_url, params: { administrador: { cra: @administrador.cra } }
     end
 
     assert_redirected_to administrador_url(Administrador.last)
@@ -34,7 +34,7 @@ class AdministradorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update administrador" do
-    patch administrador_url(@administrador), params: { administrador: { cpf: @administrador.cpf, cra: @administrador.cra } }
+    patch administrador_url(@administrador), params: { administrador: { cra: @administrador.cra } }
     assert_redirected_to administrador_url(@administrador)
   end
 

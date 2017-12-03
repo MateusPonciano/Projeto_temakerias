@@ -17,7 +17,7 @@ class CardapiosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cardapio" do
     assert_difference('Cardapio.count') do
-      post cardapios_url, params: { cardapio: { categoria: @cardapio.categoria, codigo: @cardapio.codigo, nome: @cardapio.nome, preco: @cardapio.preco } }
+      post cardapios_url, params: { cardapio: { categoria: @cardapio.categoria, nome: @cardapio.nome, preco: @cardapio.preco } }
     end
 
     assert_redirected_to cardapio_url(Cardapio.last)
@@ -34,7 +34,7 @@ class CardapiosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cardapio" do
-    patch cardapio_url(@cardapio), params: { cardapio: { categoria: @cardapio.categoria, codigo: @cardapio.codigo, nome: @cardapio.nome, preco: @cardapio.preco } }
+    patch cardapio_url(@cardapio), params: { cardapio: { categoria: @cardapio.categoria, nome: @cardapio.nome, preco: @cardapio.preco } }
     assert_redirected_to cardapio_url(@cardapio)
   end
 

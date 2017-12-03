@@ -69,6 +69,6 @@ class PromocaosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def promocao_params
-      params.require(:promocao).permit(:codigo, :descricao, :desconto)
+      params.require(:promocao).permit(:descricao, :desconto)
     end
 end

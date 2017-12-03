@@ -1,23 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cnpj: MyString
   cpf_adm: MyString
-  string: MyString
   nome: MyString
-  faturamento: 1.5
-  despesas: 1.5
+  faturamento: 9.99
+  despesas: 9.99
   numero: MyString
   cep: MyString
   cnpj_matriz: MyString
 
 two:
-  cnpj: MyString
   cpf_adm: MyString
-  string: MyString
   nome: MyString
-  faturamento: 1.5
-  despesas: 1.5
+  faturamento: 9.99
+  despesas: 9.99
   numero: MyString
   cep: MyString
   cnpj_matriz: MyString

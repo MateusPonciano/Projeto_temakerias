@@ -17,7 +17,7 @@ class FuncionariosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create funcionario" do
     assert_difference('Funcionario.count') do
-      post funcionarios_url, params: { funcionario: { cnpj_t: @funcionario.cnpj_t, cpf: @funcionario.cpf, dataadmissao: @funcionario.dataadmissao, datanasc: @funcionario.datanasc, nome: @funcionario.nome, salario: @funcionario.salario } }
+      post funcionarios_url, params: { funcionario: { cnpj_t: @funcionario.cnpj_t, dataadmissao: @funcionario.dataadmissao, datanasc: @funcionario.datanasc, nome: @funcionario.nome, salario: @funcionario.salario } }
     end
 
     assert_redirected_to funcionario_url(Funcionario.last)
@@ -34,7 +34,7 @@ class FuncionariosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update funcionario" do
-    patch funcionario_url(@funcionario), params: { funcionario: { cnpj_t: @funcionario.cnpj_t, cpf: @funcionario.cpf, dataadmissao: @funcionario.dataadmissao, datanasc: @funcionario.datanasc, nome: @funcionario.nome, salario: @funcionario.salario } }
+    patch funcionario_url(@funcionario), params: { funcionario: { cnpj_t: @funcionario.cnpj_t, dataadmissao: @funcionario.dataadmissao, datanasc: @funcionario.datanasc, nome: @funcionario.nome, salario: @funcionario.salario } }
     assert_redirected_to funcionario_url(@funcionario)
   end
 
